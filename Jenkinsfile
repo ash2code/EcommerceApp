@@ -65,6 +65,7 @@ pipeline {
         success {
             slackSend(
                 channel: SLACK_CHANNEL,
+                color: 'good'   
                 message: "Pipeline '${env.JOB_NAME}' (Build #${env.BUILD_NUMBER}) passed successfully!"
             )
         }
